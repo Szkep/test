@@ -1,0 +1,203 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    background-color: rgb(71, 71, 71)
+}
+
+/* Loading Screen --- Loading Screen */
+
+header {
+    overflow: visible;
+    position: sticky;
+}
+
+.nav-bar {
+    overflow: visible;
+    display: flex;
+    justify-content: right;
+    z-index: 1000;
+    margin: 3.5rem 4rem;
+}
+
+.nav-bar ul {
+    overflow: visible;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar a {
+    overflow: visible;
+    font-size: 1.35rem;
+    color: rgb(255, 255, 255);
+}
+
+.nav-bar a:hover {
+    transform: scale(1.35);
+    transition: 200ms;
+}
+
+.nav-bar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(91, 135, 205);
+    transform: scaleX(0);
+}
+
+.nav-bar a::after {
+    content: "Click!";
+    position: absolute;
+    font-size: .6rem;
+    bottom: -.65rem;
+    left: 0;
+    transform: scaleX(0);
+}
+
+.nav-bar a:hover::after {
+    transform:scaleX(1);
+}
+
+.button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 400ms ease-out;
+}
+
+/* ABOUT US SECTION --- ABOUT US SECTION --- ABOUT US SECTION */
+
+h5 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.about_us_container,
+.about_us_modellers {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+.about_us_modellers {
+    margin-top: 8rem;
+}
+
+.about_us_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about_model_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about_photo {
+    align-self: center;
+    max-width: 256px;
+    max-height: 256px;
+}
+
+.about_us_description,
+.about_modellers_description {
+    color: white;
+    max-width: 75ch;
+}
+
+.about_photo_model {
+    max-width: 256px;
+    max-height: 256px;
+    align-self: center;
+}
+
+.about_modellers_description {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.modellers_h {
+    align-self: flex-end;
+}
+
+.about_photo {
+    border-radius: 1rem;
+}
+
+.TitanCraft {
+    margin-bottom: 2rem;
+}
+
+.Luftmensch_Studio {
+    cursor: pointer;
+}
+
+.TitanCraft_img {
+    cursor: pointer;
+}
+
+/* Media query --- Media query --- Media query */
+
+@media screen and (max-width: 1300px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .about_us_container,
+    .about_us_modellers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    h5 {
+        font-size: 4rem;
+    }
+
+    .modellers_h {
+        align-self: center;
+    }
+
+    .about_modellers_description {
+        align-self: center;
+        text-align: center;
+    }
+
+    .about_model_div {
+        order: 1; /* Reorder the text content to appear first */
+    }
+
+    .about_photo {
+        order: 2; /* Reorder the image to appear second */
+    }
+
+    .about_us_description,
+    .about_modellers_description {
+    color: white;
+    max-width: 40ch;
+    }
+
+    .description {
+        text-align: justify;
+        margin: 0rem 5rem 0rem 5rem;
+        font-size: 1.1rem;
+    }
+
+    .about_photo {
+        align-self: center;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+}
